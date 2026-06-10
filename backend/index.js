@@ -11,7 +11,14 @@ dotenv.config()
 const app = express()
 
 // Middleware — runs on every request
-app.use(cors())                  // Allow frontend to talk to backend
+// app.use(cors())                  // Allow frontend to talk to backend
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://hire-ready-vert.vercel.app'
+  ],
+  credentials: true
+}))
 app.use(express.json())          // Parse incoming JSON requests
 
 // Routes — we'll connect these soon
