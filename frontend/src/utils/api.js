@@ -6,7 +6,7 @@ import axios from 'axios'
 // Base URL of our backend
 // We'll change this to deployed URL later
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api'
+  baseURL: 'https://hireready-backend-sxig.onrender.com/api',
 })
 
 // Interceptor — runs before EVERY request automatically
